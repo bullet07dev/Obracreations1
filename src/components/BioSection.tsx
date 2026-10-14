@@ -1,6 +1,7 @@
 import React from 'react';
 import { BIO_DATA } from '../data/portfolioData';
 import { Camera, Mail, Phone, CheckCircle2, Film, Sparkles } from 'lucide-react';
+import { getImageUrl } from '../imageAssets';
 
 export const BioSection: React.FC = () => {
   return (
@@ -16,7 +17,7 @@ export const BioSection: React.FC = () => {
               {/* Main portrait image */}
               <div className="relative rounded-xl overflow-hidden border border-white/15 shadow-2xl bg-stone-900 aspect-[4/5]">
                 <img
-                  src={BIO_DATA.portraitSrc}
+                  src={getImageUrl(BIO_DATA.portraitSrc)}
                   alt="Daniel Obra - Founder & Principal Artist of Obra Creations"
                   className="w-full h-full object-cover object-center filter contrast-105"
                 />

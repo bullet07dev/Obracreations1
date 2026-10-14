@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { PhotoItem } from '../data/portfolioData';
 import { X, ChevronLeft, ChevronRight, Camera, MapPin, Calendar, Mail } from 'lucide-react';
+import { getImageUrl } from '../imageAssets';
 
 interface LightboxModalProps {
   photo: PhotoItem | null;
@@ -83,7 +84,7 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
         {/* Photo view */}
         <div className="relative flex-1 bg-black flex items-center justify-center overflow-hidden min-h-[300px] lg:min-h-[500px]">
           <img
-            src={photo.src}
+            src={getImageUrl(photo.src)}
             alt={photo.title}
             className="w-full h-full max-h-[75vh] object-contain"
           />

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Camera, Mail, Phone, Menu, X, ArrowLeft } from 'lucide-react';
+import { getImageUrl } from '../imageAssets';
 
 interface NavbarProps {
   onShowWelcome: () => void;
@@ -18,7 +19,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onShowWelcome }) => {
           className="flex items-center gap-3 text-lg md:text-xl font-serif-luxury tracking-wider text-white font-semibold whitespace-nowrap shrink-0 group"
         >
           <span className="w-8 h-8 rounded-full border border-sky-400/30 bg-white/10 flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform">
-            <img src="/src/assets/images/Logo.png" alt="Obra Creations Logo" className="w-full h-full object-contain p-0.5" style={{ backgroundColor: '#FFFFFF' }} />
+            <img src={getImageUrl('/src/assets/images/Logo.png')} alt="Obra Creations Logo" className="w-full h-full object-contain p-0.5" style={{ backgroundColor: '#FFFFFF' }} />
           </span>
           <span>Obra Creations</span>
         </a>

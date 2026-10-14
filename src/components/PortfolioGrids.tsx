@@ -5,6 +5,7 @@ import {
   PortfolioCategory,
 } from '../data/portfolioData';
 import { Maximize2, Folder, Camera, MapPin, Calendar, SlidersHorizontal } from 'lucide-react';
+import { getImageUrl } from '../imageAssets';
 
 interface PortfolioGridsProps {
   onSelectPhoto: (photo: PhotoItem) => void;
@@ -81,7 +82,7 @@ export const PortfolioGrids: React.FC<PortfolioGridsProps> = ({ onSelectPhoto })
                   {/* Photo Container */}
                   <div className="relative aspect-[4/3] sm:aspect-[4/3] overflow-hidden bg-stone-900">
                     <img
-                      src={photo.src}
+                      src={getImageUrl(photo.src)}
                       alt={photo.title}
                       loading="lazy"
                       className="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"

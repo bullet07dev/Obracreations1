@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowDown, Mail, Sparkles, Camera, Film, Compass } from 'lucide-react';
+import { getImageUrl } from '../imageAssets';
 
 export const HeroSection: React.FC = () => {
   return (
@@ -7,7 +8,7 @@ export const HeroSection: React.FC = () => {
       {/* Background imagery with measured contrast scrim */}
       <div className="absolute inset-0 z-0 flex items-center justify-center">
         <img
-          src="/src/assets/images/Logo.png"
+          src={getImageUrl('/src/assets/images/Logo.png')}
           alt="Obra Creations Logo"
           className="w-full h-full max-h-[75vh] object-contain object-center filter brightness-50 contrast-105 opacity-35 select-none"
           style={{ backgroundColor: '#FFFFFF' }}

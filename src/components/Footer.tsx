@@ -1,6 +1,7 @@
 import React from 'react';
 import { Camera, Mail, Phone, ArrowUp } from 'lucide-react';
 import { BIO_DATA } from '../data/portfolioData';
+import { getImageUrl } from '../imageAssets';
 
 interface FooterProps {
   onShowWelcome: () => void;
@@ -18,7 +19,7 @@ export const Footer: React.FC<FooterProps> = ({ onShowWelcome }) => {
           <div className="space-y-2">
             <div className="flex items-center gap-2.5">
               <div className="w-8 h-8 rounded-full border border-sky-400/40 bg-white/10 flex items-center justify-center overflow-hidden">
-                <img src="/src/assets/images/Logo.png" alt="Obra Creations Logo" className="w-full h-full object-contain p-0.5" style={{ backgroundColor: '#FFFFFF' }}/>
+                <img src={getImageUrl('/src/assets/images/Logo.png')} alt="Obra Creations Logo" className="w-full h-full object-contain p-0.5" style={{ backgroundColor: '#FFFFFF' }}/>
               </div>
               <span className="text-xl font-serif-luxury text-white font-semibold tracking-wider">
                 Obra Creations

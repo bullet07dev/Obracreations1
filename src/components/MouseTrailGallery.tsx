@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { Sparkles, MousePointer2, RefreshCw } from 'lucide-react';
+import { getImageUrl } from '../imageAssets';
 
 const OBRA_ASSETS = [
   '/src/assets/images/Obra Creations Assets/Weddings/01 - Tobby and MJ/MJ&Tobby214.jpg',
@@ -22,7 +23,7 @@ const OBRA_ASSETS = [
   '/src/assets/images/Obra Creations Assets/Weddings/04 - Intimate Wedding/KomangAndMG-8.jpg',
   '/src/assets/images/Obra Creations Assets/Weddings/04 - Intimate Wedding/KomangAndMG.jpg',
   '/src/assets/images/Obra Creations Assets/Weddings/03 - Civil Wedding/CivilWedding-6.jpg',
-];
+].map(getImageUrl);
 
 export const MouseTrailGallery: React.FC = () => {
   const stageRef = useRef<HTMLDivElement>(null);

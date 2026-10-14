@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Camera, Sparkles, Film, Heart } from 'lucide-react';
+import { getImageUrl } from '../imageAssets';
 
 interface WelcomeViewProps {
   onProceed: () => void;
@@ -11,7 +12,7 @@ export const WelcomeView: React.FC<WelcomeViewProps> = ({ onProceed }) => {
       {/* Background cinematic imagery with measured scrim */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/src/assets/images/WelcomeBG.jpg"
+          src={getImageUrl('/src/assets/images/Obra Creations Assets/Weddings/01 - Tobby and MJ/MJ&Tobby214.jpg')}
           alt="Obra Creations Cinematic Photography"
           className="w-full h-full object-cover object-center filter brightness-40 contrast-110 scale-105 transition-transform duration-1000 ease-out"
         />
@@ -24,7 +25,7 @@ export const WelcomeView: React.FC<WelcomeViewProps> = ({ onProceed }) => {
       <header className="relative z-10 w-full max-w-6xl mx-auto px-6 py-8 flex items-center justify-between border-b border-white/10">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-full border border-sky-400/40 bg-white/10 backdrop-blur-md flex items-center justify-center overflow-hidden">
-            <img src="/src/assets/images/Logo.png" alt="Obra Creations Logo" className="w-full h-full object-contain p-1" style={{ backgroundColor: '#FFFFFF' }}/>
+            <img src={getImageUrl('/src/assets/images/Logo.png')} alt="Obra Creations Logo" className="w-full h-full object-contain p-1" style={{ backgroundColor: '#FFFFFF' }}/>
           </div>
           <div>
             <h1 className="text-xl font-serif-luxury tracking-widest uppercase text-white font-semibold">
